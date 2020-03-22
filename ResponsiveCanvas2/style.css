@@ -24,10 +24,13 @@
 	background: url("1.svg") 50% 50% no-repeat;
 }
 #frage2{
-	background: url("2.svg") 50% 50% no-repeat;
+	background: url("2beeinflusst.svg") 50% 50% no-repeat;
 }
 #frage3{
-	background: url("3.svg") 50% 50% no-repeat;
+	background: url("3unbehagen.svg") 50% 50% no-repeat;
+}
+#frage4{
+    background: url("4wichtig.svg") 50% 50% no-repeat;
 }
 .fragentext{
 	max-width: 40vw;
