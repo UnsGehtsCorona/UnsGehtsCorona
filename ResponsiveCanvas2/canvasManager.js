@@ -1,4 +1,7 @@
 let canvas = document.getElementById("cursorCanvas");
+
+let body = document.body;
+
 let canvasContainer = document.getElementById("canvasContainer");
 
 let ctx = canvas.getContext("2d");
@@ -17,6 +20,25 @@ function onResize() {
     canvas.height = canvasContainer.offsetHeight;
 }
 
+body.addEventListener("click", function(e) {
+    let cRect = canvas.getBoundingClientRect();      // Gets CSS pos, and width/height
+
+    let mouseX = Math.round(e.clientX - cRect.left);  // Subtract the 'left' of the canvas
+    mouseX /= cRect.width;
+    mouseX *= canvas.width;
+
+    let mouseY = Math.round(e.clientY - cRect.top);   // from the X/Y positions to make
+    mouseY /= cRect.height;
+    mouseY *= canvas.height;
+
+    drawCursor(mouseX, mouseY);
+});
+
+
+function clearCursors() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
 function drawCursor(mouseX, mouseY) {
     //console.log("MouseX: " + mouseX + " MouseY: " + mouseY);
     //console.log("CanvasWidth: " + canvas.width + " CanvasHeight: " + canvas.height);
@@ -25,26 +47,3 @@ function drawCursor(mouseX, mouseY) {
 }
 
 
-function addCanvasHandler(questionID) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    let div = document.getElementById(questionID);
-
-
-    div.addEventListener("click", function(e) {
-        let cRect = canvas.getBoundingClientRect();      // Gets CSS pos, and width/height
-
-        let mouseX = Math.round(e.clientX - cRect.left);  // Subtract the 'left' of the canvas
-        mouseX /= cRect.width;
-        mouseX *= canvas.width;
-
-        let mouseY = Math.round(e.clientY - cRect.top);   // from the X/Y positions to make
-        mouseY /= cRect.height;
-        mouseY *= canvas.height;
-
-        drawCursor(mouseX, mouseY);
-    });
-
-}
-
-addCanvasHandler("frage1");

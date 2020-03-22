@@ -10,6 +10,7 @@ function nextQuestion() {
 
 	questionNumber++;
 
-	addCanvasHandler("frage" + (questionNumber + 1));
+	clearCursors();	
+	
 	questionElements[questionNumber].classList.remove("hidden");
 }
