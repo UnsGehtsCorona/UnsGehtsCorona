@@ -6,9 +6,19 @@
     </head>
 
     <body onresize="onResize()">
-        <div id="frage1">
+        <div id="frage1" class="">
             <div class="fragentext">
-                <p>Wie geht es dir heute?</p>
+                <p>Wie geht es dir heute? - 1</p>
+            </div>
+        </div>
+        <div id="frage2" class="hidden">
+            <div class="fragentext">
+                <p>Wie geht es dir heute? - 2</p>
+            </div>
+        </div>
+        <div id="frage3" class="hidden">
+            <div class="fragentext">
+                <p>Wie geht es dir heute? - 3</p>
             </div>
         </div>
         <div id="canvasContainer">
@@ -16,6 +26,8 @@
 
             </canvas>
         </div>
+        <center><button onclick="nextQuestion()">Nächste Frage</button></center>
     </body>
+    <script src="questionHandler.js"></script>
     <script language="javascript" type="text/javascript" src="canvasManager.js"></script>
 </html>
