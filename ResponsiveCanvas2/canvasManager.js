@@ -1,5 +1,5 @@
 let canvas = document.getElementById("cursorCanvas");
-let div = document.getElementById("frage");
+let div = document.getElementById("frage1");
 
 let canvasContainer = document.getElementById("canvasContainer");
 
