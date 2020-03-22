@@ -1,0 +1,139 @@
+#canvasContainer {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  display: none;
+}
+
+#cursorCanvas {
+  background-color: aquamarine;
+  width: 100%;
+  height: 100%;
+}
+
+.surveyContainer {
+  padding: 2rem;
+}
+
+.headline-container {
+  background-color: #105555;
+  color: white;
+  padding: 0.5rem 0;
+}
+
+.wrapper {
+  max-width: 60%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 900px) {
+  .wrapper {
+    max-width: 95%;
+  }
+}
+
+.margin-top {
+  margin-top: 2rem;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #C8EC6F;
+  box-sizing: border-box;
+  color: #010c0c;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  box-sizing: border-box;
+}
+
+form {
+  font-size: 1.4em;
+}
+form > label {
+  line-height: 2em;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+form > input, form textarea {
+  font-family: sans-serif;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.9em;
+  border: 3px solid white;
+  background-color: #ddf9e0;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2), 0 0 16px rgba(0, 0, 0, 0.2);
+  color: #116464;
+}
+form > input:focus, form textarea:focus {
+  background-color: #e9ffec;
+  outline: none;
+}
+form > input[type=submit] {
+  background-color: #105f5f;
+  color: white;
+  width: 7em;
+  cursor: pointer;
+}
+form > input[type=submit]:hover {
+  background-color: #117777;
+}
+form fieldset {
+  border: none;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkmarkContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkmarkContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmarkContainer:hover input ~ .checkmark {
+  background-color: white;
+}
+.checkmarkContainer input:checked ~ .checkmark {
+  background-color: #116464;
+}
+.checkmarkContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+.checkmarkContainer .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #ddf9e0;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2), 0 0 16px rgba(0, 0, 0, 0.2);
+}
+.checkmarkContainer .checkmark:after {
+  top: 7px;
+  left: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ddf9e0;
+}
+
+/*# sourceMappingURL=main.css.map */

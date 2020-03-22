@@ -1,71 +1,39 @@
+<!DOCTYPE html>
 <html>
     <head>
-
+        <title>Title of the document</title>
+        <link href="main.css" rel="stylesheet">
     </head>
+
     <body>
+        <main>
+            <div class="headline-container">
+                <h2 class="wrapper">Umfrage zur Situation</h2>
+            </div>
+            <div class="wrapper surveyContainer">
+                <form class="margin-top">
+                    <label for="fname">Wie geht es dir mit der Quarantäne?</label><br>
+                    <input type="text" id="fname" name="fname">
 
-        <canvas id="cv"></canvas>
+                    <label for="fname">Platz für etwas mehr Text</label><br>
+                    <textarea>
 
-        <script>
-            let canvas = document.getElementById("cv");
-            let ctx = canvas.getContext("2d");
+                    </textarea>
 
-            canvas.width = document.body.clientWidth;
-            canvas.height = document.body.clientHeight;
-
-            let mouseX = 0;
-            let mouseY = 0;
-
-            let cursorImg = new Image();
-            cursorImg.src = "/cursor.png";
-
-
-            canvas.addEventListener("mousemove", function(e) {
-                let cRect = canvas.getBoundingClientRect();        // Gets CSS pos, and width/height
-                mouseX = Math.round(e.clientX - cRect.left);  // Subtract the 'left' of the canvas
-                mouseY = Math.round(e.clientY - cRect.top);   // from the X/Y positions to make
-                //ctx.clearRect(0, 0, canvas.width, canvas.height);  // (0,0) the top left of the canvas
-                //ctx.fillText("X: "+mouseX+", Y: "+mouseY, 10, 20);
-            });
-
-            function drawCursors(coords) {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-                coords.forEach((coord) => {
-                    if(coord.x < 1 || coord.y < 1) return;
-                    ctx.drawImage(cursorImg, coord.x, coord.y, 20, 40);
-                });
-            }
-
-        </script>
-        <script src="/socket.io/socket.io.js"></script>
-        <script>
-            let randomIdentifier = Math.random().toString(36).substring(7);
-            let socket = io();
-
-            socket.on("connect", (socket) => {
-                console.log("Verbindung hergestellt!");
-                setInterval(sendMousePosition, 400);
-            });
-
-            socket.on("positionsDataPack", (coords) => {
-                // Hier sind relative Canvas-Koordinaten
-
-                console.dir(coords);
-
-                drawCursors(coords);
-            });
-
-            function sendMousePosition() {
-                socket.emit("cursorPosition", {
-                    "x": mouseX,
-                    "y": mouseY,
-                    "id": randomIdentifier
-                });
-            }
-        </script>
+                    <p>Wie geht es dir?</p>
+                    <fieldset>
+                        <label for="mc" class="checkmarkContainer"> Sehr gut
+                            <input type="radio" id="mc" name="Z" value="M">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="mc2" class="checkmarkContainer"> So lalaa
+                            <input type="radio" id="mc2" name="Z" value="M">
+                            <span class="checkmark"></span>
+                        </label>
+                    </fieldset>
+                    <input type="submit"></form>
+                </form>
+            </div>
+        </main>
     </body>
 </html>
-
-
-
