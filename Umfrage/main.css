@@ -12,12 +12,8 @@
   height: 100%;
 }
 
-.surveyContainer {
-  padding: 2rem;
-}
-
 .headline-container {
-  background-color: #105555;
+  background-color: #8ba639;
   color: white;
   padding: 0.5rem 0;
 }
@@ -36,10 +32,16 @@
   margin-top: 2rem;
 }
 
-body {
-  font-family: sans-serif;
-  background-color: #C8EC6F;
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
+* {
   box-sizing: border-box;
+}
+
+body {
+  font-family: "ABeeZee", sans-serif;
   color: #010c0c;
   margin: 0;
   padding: 0;
@@ -50,35 +52,41 @@ main {
 }
 
 form {
-  font-size: 1.4em;
+  background-color: #f4ffbc;
+  border-radius: 10px;
+  border-top: 5px solid #8ba639;
+  border-bottom: 5px solid #8ba639;
+  padding: 0.5rem 2rem 2rem 2rem;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
 }
 form > label {
   line-height: 2em;
   display: inline-block;
   margin-top: 0.5rem;
+  font-size: 1.3em;
 }
 form > input, form textarea {
+  font-size: 1.2em;
   font-family: sans-serif;
   width: 100%;
   padding: 0.5rem;
-  font-size: 0.9em;
   border: 3px solid white;
   background-color: #ddf9e0;
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2), 0 0 16px rgba(0, 0, 0, 0.2);
-  color: #116464;
+  color: #8ba639;
 }
 form > input:focus, form textarea:focus {
   background-color: #e9ffec;
   outline: none;
 }
 form > input[type=submit] {
-  background-color: #105f5f;
+  background-color: #8ba639;
   color: white;
   width: 7em;
   cursor: pointer;
 }
 form > input[type=submit]:hover {
-  background-color: #117777;
+  background-color: #8ba639;
 }
 form fieldset {
   border: none;
@@ -111,7 +119,7 @@ form fieldset {
   background-color: white;
 }
 .checkmarkContainer input:checked ~ .checkmark {
-  background-color: #116464;
+  background-color: #8ba639;
 }
 .checkmarkContainer input:checked ~ .checkmark:after {
   display: block;
@@ -128,8 +136,8 @@ form fieldset {
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2), 0 0 16px rgba(0, 0, 0, 0.2);
 }
 .checkmarkContainer .checkmark:after {
-  top: 7px;
-  left: 7px;
+  top: 4px;
+  left: 4px;
   width: 6px;
   height: 6px;
   border-radius: 50%;

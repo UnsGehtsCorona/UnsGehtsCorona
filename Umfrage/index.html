@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Title of the document</title>
+        <title>Umfrage</title>
         <link href="main.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <main>
-            <div class="headline-container">
-                <h2 class="wrapper">Umfrage zur Situation</h2>
+            <div class="headline-container margin-bottom">
+                <h2 class="wrapper">Uns gehts Corona</h2>
             </div>
-            <div class="wrapper surveyContainer">
-                <form class="margin-top">
-                    <label for="fname">Wie geht es dir mit der Quarantäne?</label><br>
-                    <input type="text" id="fname" name="fname">
+            <div class="wrapper">
+                <form id="survey">
+                    <h2>Umfrage zur Situation</h2>
+                    <label for="question_1">Wie geht es dir mit der Quarantäne?</label><br>
+                    <input type="text" id="question_1" name="question_1">
 
-                    <label for="fname">Platz für etwas mehr Text</label><br>
-                    <textarea>
+                    <label for="question_1">Platz für etwas mehr Text</label><br>
+                    <textarea name="textfield" form="survey"></textarea>
 
-                    </textarea>
-
-                    <p>Wie geht es dir?</p>
-                    <fieldset>
-                        <label for="mc" class="checkmarkContainer"> Sehr gut
-                            <input type="radio" id="mc" name="Z" value="M">
+                    <label>Wie geht es dir?</label>
+                    <fieldset name="question_2", form="survey">
+                        <label for="option_1" class="checkmarkContainer"> Sehr gut
+                            <input type="radio" id="option_1" name="question_2" value="M">
                             <span class="checkmark"></span>
                         </label>
-                        <label for="mc2" class="checkmarkContainer"> So lalaa
-                            <input type="radio" id="mc2" name="Z" value="M">
+                        <label for="option_2" class="checkmarkContainer"> So lalaa
+                            <input type="radio" id="option_2" name="question_2" value="M">
                             <span class="checkmark"></span>
                         </label>
                     </fieldset>
