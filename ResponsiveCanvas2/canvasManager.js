@@ -1,5 +1,5 @@
 let canvas = document.getElementById("cursorCanvas");
-let div = document.getElementById("frage1");
+let body = document.body;
 
 let canvasContainer = document.getElementById("canvasContainer");
 
@@ -19,7 +19,7 @@ function onResize() {
     canvas.height = canvasContainer.offsetHeight;
 }
 
-div.addEventListener("click", function(e) {
+body.addEventListener("click", function(e) {
     let cRect = canvas.getBoundingClientRect();      // Gets CSS pos, and width/height
 
     let mouseX = Math.round(e.clientX - cRect.left);  // Subtract the 'left' of the canvas
