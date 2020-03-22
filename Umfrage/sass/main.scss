@@ -1,0 +1,165 @@
+@import 'variables';
+@import 'colors';
+@import 'mediaqueries';
+
+#canvasContainer {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  display: none;
+}
+
+#cursorCanvas {
+  background-color: aquamarine;
+  width: 100%;
+  height: 100%;
+}
+
+.headline-container {
+  background-color: map-get($colors, accent);
+  color: white;
+  padding: $spacing-small 0;
+}
+
+.wrapper {
+  max-width: 60%;
+  margin: 0 auto;
+  @include respond-to(small) {
+    max-width: 95%;
+  }
+}
+
+.margin-top {
+  margin-top: $spacing;
+}
+
+.margin-bottom {
+  margin-bottom: $spacing;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'ABeeZee', sans-serif;
+  color: #010c0c;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  box-sizing: border-box;
+}
+
+h2 {
+  //color: #024C4C;
+  //font-weight: normal;
+}
+
+form {
+  background-color: map-get($colors, bg);
+  border-radius: 10px;
+  border-top: 5px solid map-get($colors, accent);
+  border-bottom: 5px solid map-get($colors, accent);
+  padding: $spacing-small $spacing $spacing $spacing;
+  box-shadow:
+          0 0 16px rgba(0,0,0,0.2);
+
+  & > label {
+    line-height: 2em;
+    display: inline-block;
+    margin-top: $spacing-small;
+    font-size: 1.3em;
+  }
+  & > input, textarea {
+    font-size: 1.2em;
+    font-family: sans-serif;
+    width: 100%;
+    padding: $spacing-small;
+    border: 3px solid white;
+    background-color: map-get($colors, field_bg);
+    box-shadow:
+            inset 0 0 8px  rgba(0,0,0,0.2),
+            0 0 16px rgba(0,0,0,0.2);
+    color: map-get($colors, accent);
+
+    &:focus {
+      //border-color: map-get($colors, main);
+      background-color: #e9ffec;
+      outline: none;
+    }
+  }
+  & > input[type=submit] {
+    background-color: map-get($colors, accent);
+    color: white;
+    width: 7em;
+    cursor: pointer;
+
+    &:hover {
+      background-color: map-get($colors, accent);
+    }
+  }
+  fieldset {
+    border: none;
+  }
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkmarkContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &:hover input ~ .checkmark{
+    background-color: white;
+  }
+  input:checked {
+    ~ .checkmark {
+      background-color: map-get($colors, accent);
+      &:after {
+        display: block;
+      }
+    }
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: map-get($colors, field_bg);
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow:
+            inset 0 0 8px  rgba(0,0,0,0.2),
+            0 0 16px rgba(0,0,0,0.2);
+    &:after {
+      top: 4px;
+      left: 4px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: map-get($colors, field_bg);
+    }
+  }
+}
