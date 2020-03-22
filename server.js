@@ -21,6 +21,10 @@ io.on('connection', function(socket){
         });
         //console.log(`Got cursor x: ${coords.x} y: ${coords.y}`);
     });
+
+    socket.on("getUserCount", () => {
+        socket.emit("userCount", socket.client.conn.server.clientsCount);
+    });
 });
 
 let cursorPositions = [];
@@ -45,7 +49,7 @@ function distributeCursorPositions() {
 
     console.dir(temp);
 
-    io.emit("positionsDataPack", temp);
+    io.volatile.emit("positionsDataPack", temp);
 
     if(counter > 5) {
         cursorPositions = [];
