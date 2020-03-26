@@ -15,7 +15,7 @@
     height: 100%;
 }
 
-#frage1, #frage2, #frage3{
+.frage{
 	height: 100vh;
 	width: 100vw;
 	background-size: contain; 
@@ -24,17 +24,33 @@
 	background: url("1.svg") 50% 50% no-repeat;
 }
 #frage2{
-	background: url("2beeinflusst.svg") 50% 50% no-repeat;
+	background: url("2fuehlen.svg") 50% 50% no-repeat;
 }
 #frage3{
-	background: url("3unbehagen.svg") 50% 50% no-repeat;
+	background: url("3nah.svg") 50% 50% no-repeat;
 }
 #frage4{
-    background: url("4wichtig.svg") 50% 50% no-repeat;
+    background: url("4verbunden.svg") 50% 50% no-repeat;
 }
+#frage5{
+    background: url("5unbehagen.svg") 50% 50% no-repeat;
+}
+#frage6{
+    background: url("6wichtig.svg") 50% 50% no-repeat;
+}
+#frage7{
+    background: url("7einschraenkung.svg") 50% 50% no-repeat;
+}
+#frage8{
+    background: url("8moeglichkeiten.svg") 50% 50% no-repeat;
+}
+#frage9{
+    background: url("9map.svg") 50% 50% no-repeat;
+}
+
 .fragentext{
 	max-width: 40vw;
-	padding: 20px;
+	padding: 5vh;
 	margin: auto;
 	text-align: center;
 }
@@ -42,7 +58,7 @@
 	border-bottom: 2px solid black;
     display: inline;
     font-size: 1.3em;
-    font-size: 3vw;
+    font-size: 2.4vw;
 }
 
 body{
