@@ -3,6 +3,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
+    max-width: 1024px;
     margin: 0 auto;
     position: absolute;
     top: 0;
