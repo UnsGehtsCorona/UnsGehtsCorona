@@ -1,4 +1,3 @@
-
 function getQuestionByQID(qid) {
     return new Promise((resolve, reject) => {
         if(qid.length === 40) {

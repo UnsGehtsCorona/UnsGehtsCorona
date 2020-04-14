@@ -1,4 +1,4 @@
-let pageIdentifier = "corona_page_" + questionNumber;
+let pagePrefix = "corona_page_";
 let socket = io();
 
 socket.on("connect", (socket) => {
@@ -13,6 +13,6 @@ function sendMousePosition(mouseX, mouseY) {
     socket.emit("cursorPosition", {
         "x": mouseX,
         "y": mouseY,
-        "id": pageIdentifier
+        "id": pagePrefix + questionNumber
     });
 }

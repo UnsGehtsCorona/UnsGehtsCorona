@@ -48,9 +48,11 @@ function drawCursor(mouseX, mouseY) {
 
 
 function drawCursors(coords) {
+    clearCursors();
     ctx = canvas.getContext("2d");
-    coords.forEach((coord) => {
-        if(coord.x < 1 || coord.y < 1) return;
-        ctx.drawImage(cursorImg, coord.x, coord.y, 15, 22);
+    coords.forEach((cursor) => {
+        if(cursor.x < 1 || cursor.y < 1) return;
+        if(cursor.id !== "corona_page_" + questionNumber) return;
+        ctx.drawImage(cursorImg, cursor.x, cursor.y, 15, 22);
     });
 }

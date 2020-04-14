@@ -22,31 +22,10 @@ io.on('connection', function(socket){
 
 let cursorPositions = [];
 
-function removeDupes(array) {
-    let unique = [];
-
-    return array.reverse().filter(packet => {
-        if(unique.indexOf(packet.id) > -1) {
-            return false;
-        } else {
-            unique.push(packet.id);
-            return true;
-        }
-    });
-}
-
-
 let counter = 0;
 function distributeCursorPositions() {
-    let temp = removeDupes(cursorPositions);
-
-    console.dir(temp);
-
-    io.volatile.emit("positionsDataPack", temp);
-
-    if(counter > 5) {
-        cursorPositions = [];
-    }
+    io.volatile.emit("positionsDataPack", cursorPositions);
+    console.log(cursorPositions);
     counter++;
 }
 
