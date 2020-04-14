@@ -32,8 +32,8 @@ body.addEventListener("click", function(e) {
     mouseY *= canvas.height;
 
     drawCursor(mouseX, mouseY);
+    sendMousePosition(mouseX, mouseY);
 });
-
 
 function clearCursors() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -45,5 +45,3 @@ function drawCursor(mouseX, mouseY) {
     ctx = canvas.getContext("2d");
     ctx.drawImage(cursorImg, mouseX, mouseY, 15, 22);
 }
-
-
