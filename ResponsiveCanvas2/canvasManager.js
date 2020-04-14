@@ -45,3 +45,12 @@ function drawCursor(mouseX, mouseY) {
     ctx = canvas.getContext("2d");
     ctx.drawImage(cursorImg, mouseX, mouseY, 15, 22);
 }
+
+
+function drawCursors(coords) {
+    ctx = canvas.getContext("2d");
+    coords.forEach((coord) => {
+        if(coord.x < 1 || coord.y < 1) return;
+        ctx.drawImage(cursorImg, coord.x, coord.y, 15, 22);
+    });
+}
