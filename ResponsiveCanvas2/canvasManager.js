@@ -21,20 +21,31 @@ function onResize() {
 }
 
 function handleClicks(e){
-    e.preventDefault()
+    e.stopPropagation();
+    e.preventDefault();
     let cRect = canvas.getBoundingClientRect();      // Gets CSS pos, and width/height
 
-    let mouseX = Math.round(e.clientX - cRect.left);  // Subtract the 'left' of the canvas
+    if (typeof e.clientX !== 'undefined'){
+        var posX = e.clientX;   //touch vs click hacks
+        var posY = e.clientY;
+    } else{
+        var posX = e.touches[0].clientX;
+        var posY = e.touches[0].clientY;
+    }
+    let mouseX = Math.round(posX - cRect.left);  // Subtract the 'left' of the canvas
     mouseX /= cRect.width;
     mouseX *= canvas.width;
 
-    let mouseY = Math.round(e.clientY - cRect.top);   // from the X/Y positions to make
+
+    let mouseY = Math.round(posY - cRect.top);   // from the X/Y positions to make
     mouseY /= cRect.height;
     mouseY *= canvas.height;
-
+    console.log("click! drawing cursor");
+    console.log(mouseX, cRect.top);
     drawCursor(mouseX, mouseY);
     sendMousePosition(mouseX, mouseY);
 }
+
 
 body.addEventListener('touchstart', handleClicks)
 body.addEventListener('click', handleClicks)
