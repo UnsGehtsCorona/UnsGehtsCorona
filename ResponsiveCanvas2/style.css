@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 #canvasContainer {
-    position: relative;
     width: 100vw;
     height: 100vh;
-    max-width: 1024px;
+
     margin: 0 auto;
     position: absolute;
     top: 0;
@@ -14,7 +13,7 @@
     background-color: rgba(0,190,0,0);
     width: 100%;
     height: 100%;
-    pointer-events: auto
+    pointer-events: auto;
 }
 
 .frage{
