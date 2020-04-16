@@ -20,7 +20,8 @@ function onResize() {
     canvas.height = canvasContainer.offsetHeight;
 }
 
-body.addEventListener("click", function(e) {
+function handleClicks(){
+    evt.preventDefault()
     let cRect = canvas.getBoundingClientRect();      // Gets CSS pos, and width/height
 
     let mouseX = Math.round(e.clientX - cRect.left);  // Subtract the 'left' of the canvas
@@ -33,7 +34,12 @@ body.addEventListener("click", function(e) {
 
     drawCursor(mouseX, mouseY);
     sendMousePosition(mouseX, mouseY);
-});
+}
+
+body.addEventListener('touchstart', handleClicks)
+body.addEventListener('click', handleClicks)
+
+
 
 function clearCursors() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
