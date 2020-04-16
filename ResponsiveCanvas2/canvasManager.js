@@ -20,8 +20,8 @@ function onResize() {
     canvas.height = canvasContainer.offsetHeight;
 }
 
-function handleClicks(){
-    evt.preventDefault()
+function handleClicks(e){
+    e.preventDefault()
     let cRect = canvas.getBoundingClientRect();      // Gets CSS pos, and width/height
 
     let mouseX = Math.round(e.clientX - cRect.left);  // Subtract the 'left' of the canvas
