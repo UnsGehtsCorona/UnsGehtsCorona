@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Uns geht's corona!</title>
+        <title>We feel corona'd!</title>
         <link href="style.css" rel="stylesheet">
     </head>
 
-    <body onresize="onResize()">
+    <body onresize="onResize()" class="en">
         <div id="frage1" class="frage">
             <div class="fragentext">
-                <p>Wie geht es dir heute?</p>
+                <p>How are you today?</p>
             </div>
         </div>
         <div id="frage2" class="frage hidden">
             <div class="fragentext">
-                <p>Wie fühlst du dich?</p>
+                <p>How do you feel?</p>
             </div>
         </div>
         <div id="frage3" class="frage hidden">
             <div class="fragentext">
-                <p>Wie nah fühlst du dich anderen Menschen heute?</p>
+                <p>How close to others do you feel today?</p>
             </div>
         </div>
         <div id="frage4" class="frage hidden">
             <div class="fragentext">
-                <p>Wie verbunden fühlst du dich heute?</p>
+                <p>How connected do you feel today?</p>
             </div>
         </div>
         <div id="frage5" class="frage hidden">
             <div class="fragentext">
-                <p>Was bereitet dir Unbehagen?</p>
+                <p>What feels threatening to you?</p>
             </div>
         </div>
         <div id="frage6" class="frage hidden">
             <div class="fragentext">
-                <p>Was ist dir wichtig im Leben?</p>
+                <p>What is important in your life?</p>
             </div>
         </div>
         <div id="frage7" class="frage hidden">
             <div class="fragentext">
-                <p>Was schränkt dich ein?</p>
+                <p>What limits you?</p>
             </div>
         </div>
         <div id="frage8" class="frage hidden">
             <div class="fragentext">
-                <p>Was sind deine Möglichkeiten in der Quarantäne?</p>
+                <p>What are your possibilities in the quarantine?</p>
             </div>
         </div>
         <div id="frage9" class="frage hidden">
             <div class="fragentext">
-                <p>Wo befindest du dich??</p>
+                <p>Where are you currently?</p>
             </div>
         </div>
         <div id="canvasContainer">
@@ -56,7 +56,7 @@
 
             </canvas>
         </div>
-        <center><button class="nextquestion" onclick="nextQuestion()">Nächste Frage</button></center>
+        <center><button class="nextquestion" onclick="nextQuestion()">Next question</button></center>
     </body>
     <script src="questionHandler.js"></script>
     <script language="javascript" type="text/javascript" src="canvasManager.js"></script>

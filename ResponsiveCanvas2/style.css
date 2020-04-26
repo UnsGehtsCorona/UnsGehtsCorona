@@ -22,13 +22,13 @@
 	background-size: contain; 
 }
 #frage1{
-	background: url("1.svg") 50% 50% no-repeat;
+    background: url("1.svg") 50% 50% no-repeat;
 }
 #frage2{
-	background: url("2fuehlen.svg") 50% 50% no-repeat;
+    background: url("2fuehlen.svg") 50% 50% no-repeat;
 }
 #frage3{
-	background: url("3nah.svg") 50% 50% no-repeat;
+    background: url("3nah.svg") 50% 50% no-repeat;
 }
 #frage4{
     background: url("4verbunden.svg") 50% 50% no-repeat;
@@ -49,6 +49,36 @@
     background: url("9map.svg") 50% 50% no-repeat;
 }
 
+
+
+.en #frage1{
+    background: url("1_en.svg") 50% 50% no-repeat;
+}
+.en #frage2{
+    background: url("2fuehlen_en.svg") 50% 50% no-repeat;
+}
+.en #frage3{
+    background: url("3nah_en.svg") 50% 50% no-repeat;
+}
+.en #frage4{
+    background: url("4verbunden.svg") 50% 50% no-repeat;
+}
+.en #frage5{
+    background: url("5unbehagen_en.svg") 50% 50% no-repeat;
+}
+.en #frage6{
+    background: url("6wichtig_en.svg") 50% 50% no-repeat;
+}
+.en #frage7{
+    background: url("7einschraenkung_en.svg") 50% 50% no-repeat;
+}
+.en #frage8{
+    background: url("8moeglichkeiten_en.svg") 50% 50% no-repeat;
+}
+.en #frage9{
+    background: url("9map.svg") 50% 50% no-repeat;
+}
+
 .fragentext{
 	max-width: 40vw;
 	padding: 5vh;
@@ -66,6 +96,19 @@ body{
 	margin: 0;
 	padding: 0;
     font-family: 'Open Sans', sans-serif;
+}
+.nextquestion{
+    margin: -42px 0 0 0px;
+    position: absolute;
+    background-color: #369AAA;
+    border: none;
+    color: white;
+    padding: 11px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    right: calc(50vw - 75px);
 }
 .hidden {
     display: none;
